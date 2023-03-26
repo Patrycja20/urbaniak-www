@@ -33,4 +33,14 @@ Jakie typy
 	W miejscu pracy
 
 
-+Serwis: Konserwacja, czyszczenie filtrów, odgrzybianie, wykrywanie nieszczelności w układzie, naprawa, przeglądy okresowe, kontrola układu elektrycznego,sprawdzenie wydajności urządzenia, sprawdzenie układu odprowadzającego wodę. 
++Serwis:
+- Konserwacja,
+- Odgrzybianie,
+- Przeglądy okresowe,
+
+czyszczenie filtrów,
+wykrywanie nieszczelności w układzie,
+naprawa, 
+sprawdzenie wydajności urządzenia, 
+kontrola układu elektrycznego,
+sprawdzenie układu odprowadzającego wodę. 
