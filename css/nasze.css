@@ -47,3 +47,7 @@ a.telephone-circle-link {
 
 
 
+.background-o-nas {
+  --bs-bg-opacity: 1;
+  background-color:rgb(162, 180, 139);
+}
