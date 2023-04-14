@@ -3,11 +3,25 @@
 
 header.masthead {
   background-image: linear-gradient(to bottom, rgba(85, 80, 80, 0.375) 0%, rgba(85, 80, 80, 0.375) 0%), url("../assets/img/bg.jpg");
+  height: 100%;
 }
 
+.nav-link.active {
+  color: rgb(17, 100, 35) !important;
+  /*text-decoration-line: underline;
+  text-decoration-thickness: 0.1rem;
+  text-decoration-color: currentColor;*/
+}
 
+.nav-link:hover {
+  color: rgb(20, 190, 5) !important;
+}
 .text-primary {
   color: rgb(18, 113, 56) !important;
+}
+
+.bg-primary {
+  background-color: #325a83 !important;
 }
 
 hr.divider {
@@ -26,15 +40,16 @@ hr.divider {
   z-index: 1000;
   right: 0;
   bottom: 0;
-  border-radius: 25px;
+  border-radius: 45px;
   background-color: rgb(18, 113, 56);
   box-shadow: 2px 2px 24px 0px rgb(2, 54, 0);
+  animation: animationA 1s 0s infinite alternate both;
 }
 
 .telephone-circle-inner {
-  font-size: 22px;
-  width: 50px;
-  height: 50px;
+  font-size: 35px;
+  width: 90px;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +60,39 @@ a.telephone-circle-link {
   display: block;
 }
 
+.bi-telephone {
+   animation: animationB 1s 0s infinite alternate both;
+}
 
+@keyframes animationA {
+  0% {
+      background-color: rgb(18, 113, 56);
+      box-shadow: 2px 2px 20px 0px rgb(2, 54, 0);
+  }
+  50% {
+      background-color: rgb(18, 113, 56);
+      box-shadow: 2px 2px 25px 0px rgb(2, 54, 0);
+  }
+  100% {
+      background-color: rgb(18, 113, 56);
+      border-radius: 100%;
+      transform: scale(0.8);
+      box-shadow: 2px 2px 40px 0px rgb(2, 54, 0);
+
+  }
+}
+
+@keyframes animationB {
+  0% {
+      transform: rotate(0);
+  }
+  50% {
+      transform: rotate(45deg);
+  }
+  100% {
+      transform: rotate(45deg);
+  }
+}
 
 .background-o-nas {
   --bs-bg-opacity: 1;
