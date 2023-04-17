@@ -16,6 +16,11 @@ header.masthead {
 .nav-link:hover {
   color: rgb(20, 190, 5) !important;
 }
+
+.navbar-brand:hover {
+  color: rgb(20, 190, 5) !important;
+}
+
 .text-primary {
   color: rgb(18, 113, 56) !important;
 }
@@ -94,7 +99,26 @@ a.telephone-circle-link {
   }
 }
 
+.background-klimatyzacja {
+  --bs-bg-opacity: 1;
+  background-color:rgb(255, 255, 255);
+  color:rgb(0, 75, 126);
+}
+
+.bg-pompy_ciepla {
+  --bs-bg-opacity: 1;
+  background-color:rgb(255, 255, 255);
+  color:rgb(158, 84, 0);
+}
+
+.background-wentylacja_rekuperacja {
+  --bs-bg-opacity: 1;
+  background-color:rgb(255, 255, 255);
+  color:rgb(77, 75, 75);
+}
+
 .background-o-nas {
   --bs-bg-opacity: 1;
-  background-color:rgb(162, 180, 139);
+  background-color:rgb(255, 255, 255);
+  color:rgb(9, 53, 0);
 }
