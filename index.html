@@ -49,6 +49,7 @@
                     <li class="nav-item"><a class="nav-link" href="#serwis">Serwis</a></li>
                     <li class="nav-item"><a class="nav-link" href="#o_nas">O nas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+                    <li class="nav-item" id="message">message </li>
                 </ul>
             </div>
         </div>
@@ -135,7 +136,7 @@
         </div>
     </section>
     <!-- wentylacja -->
-    <section class="page-section background-wentylacja_rekuperacja" id="wentylacja_rekuperacja">
+    <section class="page-section background-wentylacja_rekuperacja fill" id="wentylacja_rekuperacja">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8 text-center">
@@ -150,7 +151,7 @@
         </div>
     </section>
     <!-- serwis-->
-    <section class="page-section" id="serwis">
+    <section class="page-section fill" id="serwis">
         <div class="container px-4 px-lg-5">
             <h2 class="text-center mt-0">Serwis</h2>
             <hr class="divider" />
@@ -202,7 +203,7 @@
         </div>
     </section>
     <!-- O nas-->
-    <section class="page-section background-o-nas" id="o_nas">
+    <section class="page-section background-o-nas fill" id="o_nas">
         <div class="container px-4 px-lg-5 text-center">
             <h2 class="mb-4">Cieszymy się, że odwiedzasz naszą stronę i chcesz dowiedzieć się więcej o naszej firmie</h2>
             <h4 class="mb-4">
@@ -265,6 +266,15 @@ Jeśli potrzebujesz wsparcia w zakresie klimatyzacji, pomp ciepła, wentylacji, 
             <div class="small text-center text-muted">Copyright &copy; 2023 - HVACR Łukasz Urbaniak</div>
         </div>
     </footer>
+
+
+    <nav id="bottom_bar_producenci" class="navbar fixed-bottom navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Producent1, producent2, pruducent3, producent4, producent5, producent6</a>
+        </div>
+      </nav>
+
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- SimpleLightbox plugin JS-->
@@ -276,6 +286,43 @@ Jeśli potrzebujesz wsparcia w zakresie klimatyzacji, pomp ciepła, wentylacji, 
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-</body>
+    <script>
+        function isElementInViewPort(element, isFirst = false) {
+            const element1Rect = element.getBoundingClientRect();
+
+
+            const firstWspolczynnikGorny = isFirst ? 1 : 0.7;
+            const firstWspolczynnikDolny = isFirst ? 0.5 : 0.9;
+
+            return (element1Rect.top + element1Rect.height * firstWspolczynnikGorny) >= 0 &&
+                (element1Rect.bottom - element1Rect.height * firstWspolczynnikDolny) <= (window.innerHeight || document.documentElement.clientHeight);
+        }
+
+
+        function isTwoElementsInViewport(element1, element2) {
+
+            const isElement1Visible = isElementInViewPort(element1, true);
+            const isElement2Visible = isElementInViewPort(element2, false);
+
+            return isElement1Visible || isElement2Visible;
+        }
+
+
+        const box1 = document.querySelector('#klimatyzacja');
+        const box2 = document.querySelector('#pompy_ciepla');
+        const bottomBar = document.querySelector('#bottom_bar_producenci');
+
+        document.addEventListener('scroll', function () {
+            const hiddenClass = isTwoElementsInViewport(box1, box2)
+                ? 'block'
+                : 'none';
+                console.log("hiddenClass", hiddenClass);
+            bottomBar.style.display = hiddenClass;
+
+        }, {
+            passive: true
+        });
+    </script>
+    </body>l'
 
 </html>
